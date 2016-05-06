@@ -21,7 +21,7 @@ isodate==0.5.4
 itsdangerous==0.24
 Jinja2==2.8
 keepalive==0.5
-git+https://github.com/openpermissions/koi.git@ssl_options
+opp-koi==1.0.9
 lazy-object-proxy==1.2.2
 logilab-common==1.2.0
 Markdown==2.6.6
