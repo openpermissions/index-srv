@@ -3,5 +3,5 @@ requests==2.4.3
 tornado==4.3
 python-dateutil==2.4.2
 opp-chub==1.0.5
-opp-koi==1.0.8
+opp-koi==1.0.9
 opp-bass==1.0.9

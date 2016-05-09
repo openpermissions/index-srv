@@ -33,7 +33,7 @@ from tornado.ioloop import IOLoop
 from tornado.options import define, options
 from tornado.httpclient import HTTPError
 import koi
-from koi.configure import log_config, configure_syslog
+from koi.configure import log_config, configure_syslog, ssl_server_options
 from chub import API
 from chub.oauth2 import Read, get_token
 
@@ -207,7 +207,7 @@ class RepositoryStore(object):
     def __init__(self, api_client=None):
         if api_client is None:
             api_client = API(options.url_accounts,
-                             ca_certs=options.ssl_ca_cert)
+                             ssl_options=ssl_server_options())
 
         self._api = api_client
         self._endpoint = self._api.accounts.repositories
@@ -528,9 +528,9 @@ def repository_service_client(location):
     token = yield get_token(
         options.url_auth, options.service_id,
         options.client_secret, scope=Read(),
-        ca_certs=options.ssl_ca_cert
+        ssl_options=ssl_server_options()
     )
-    client = API(location, token=token, ca_certs=options.ssl_ca_cert)
+    client = API(location, token=token, ssl_options=ssl_server_options())
     raise Return(client)
 
 
