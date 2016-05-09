@@ -10,7 +10,7 @@ Running locally
 ===============
 #### blazegraph data store
 
-Follow the instruction on blazegraph in [developerenvironment setup doc]( https://github.com/openpermissions/dev-environment#blazegraph).
+Follow the instruction on [blazegraph](https://www.blazegraph.com/) to set up a data store for the index service.
 
 #### index service application
 ```

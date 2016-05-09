@@ -1,549 +1,549 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
-   xmlns:chub="http://www.copyrighthub.co.uk/2014/chub#"
+   xmlns:chub="http://www.openpermissions.co.uk/2014/chub#"
    xmlns:lcc="http://www.rightscom.com/2011/lcc#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#08b3bfb838c611e48d9c02d4dc4f2851-C2">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#08b3bfb838c611e48d9c02d4dc4f2851-C2">
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#AssetMode"/>
     <chub:CategoryValue rdf:resource="http://www.rightscom.com/2011/lcc#Work"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#08b3bfb838c611e48d9c02d4dc4f2851">
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#08b3bfb838c611e48d9c02d4dc4f2851-C3"/>
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#08b3bfb838c611e48d9c02d4dc4f2851">
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#08b3bfb838c611e48d9c02d4dc4f2851-C3"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Asset"/>
     <chub:ReferenceID>08b3bfb838c611e48d9c02d4dc4f2851</chub:ReferenceID>
-    <lcc:Category rdf:resource="http://www.copyrighthub.co.uk/2014/hk#08b3bfb838c611e48d9c02d4dc4f2851-D2"/>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#08b3bfb838c611e48d9c02d4dc4f2851-C1"/>
-    <lcc:Category rdf:resource="http://www.copyrighthub.co.uk/2014/hk#08b3bfb838c611e48d9c02d4dc4f2851-D1"/>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#08b3bfb838c611e48d9c02d4dc4f2851-C2"/>
+    <lcc:Category rdf:resource="http://www.openpermissions.co.uk/2014/hk#08b3bfb838c611e48d9c02d4dc4f2851-D2"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#08b3bfb838c611e48d9c02d4dc4f2851-C1"/>
+    <lcc:Category rdf:resource="http://www.openpermissions.co.uk/2014/hk#08b3bfb838c611e48d9c02d4dc4f2851-D1"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#08b3bfb838c611e48d9c02d4dc4f2851-C2"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#08b3343038c611e48d9c02d4dc4f2851">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#08b3343038c611e48d9c02d4dc4f2851">
     <chub:ReferenceID>08b3343038c611e48d9c02d4dc4f2851</chub:ReferenceID>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#08b3343038c611e48d9c02d4dc4f2851-C3"/>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#08b3343038c611e48d9c02d4dc4f2851-C1"/>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#08b3343038c611e48d9c02d4dc4f2851-C2"/>
-    <lcc:Category rdf:resource="http://www.copyrighthub.co.uk/2014/hk#08b3343038c611e48d9c02d4dc4f2851-D2"/>
-    <lcc:Category rdf:resource="http://www.copyrighthub.co.uk/2014/hk#08b3343038c611e48d9c02d4dc4f2851-D1"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#08b3343038c611e48d9c02d4dc4f2851-C3"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#08b3343038c611e48d9c02d4dc4f2851-C1"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#08b3343038c611e48d9c02d4dc4f2851-C2"/>
+    <lcc:Category rdf:resource="http://www.openpermissions.co.uk/2014/hk#08b3343038c611e48d9c02d4dc4f2851-D2"/>
+    <lcc:Category rdf:resource="http://www.openpermissions.co.uk/2014/hk#08b3343038c611e48d9c02d4dc4f2851-D1"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Asset"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource4-CSET-L1">
-    <lcc:Entity1Role rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Set"/>
-    <lcc:Entity2Role rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Provider"/>
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource4-CSET-L1">
+    <lcc:Entity1Role rdf:resource="http://www.openpermissions.co.uk/2014/chub#Set"/>
+    <lcc:Entity2Role rdf:resource="http://www.openpermissions.co.uk/2014/chub#Provider"/>
     <lcc:LinkType rdf:resource="http://www.rightscom.com/2011/lcc#Asset_Party"/>
-    <lcc:Entity1 rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource4-CSET"/>
-    <lcc:Entity2 rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource4"/>
+    <lcc:Entity1 rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource4-CSET"/>
+    <lcc:Entity2 rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource4"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Link"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource2-CSET-C1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource2-CSET-C1">
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#IsClassRepresentative"/>
     <chub:CategoryValue rdf:resource="http://www.rightscom.com/2011/lcc#False"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource2-CSET-L1">
-    <lcc:Entity1Role rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Set"/>
-    <lcc:Entity2 rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource2"/>
-    <lcc:Entity1 rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource2-CSET"/>
-    <lcc:Entity2Role rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Provider"/>
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource2-CSET-L1">
+    <lcc:Entity1Role rdf:resource="http://www.openpermissions.co.uk/2014/chub#Set"/>
+    <lcc:Entity2 rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource2"/>
+    <lcc:Entity1 rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource2-CSET"/>
+    <lcc:Entity2Role rdf:resource="http://www.openpermissions.co.uk/2014/chub#Provider"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Link"/>
     <lcc:LinkType rdf:resource="http://www.rightscom.com/2011/lcc#Asset_Party"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#08b45d1038c611e48d9c02d4dc4f2851-D2">
-    <lcc:DescriptorSubType rdf:resource="http://www.copyrighthub.co.uk/2014/chub#BriefDescription"/>
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#08b45d1038c611e48d9c02d4dc4f2851-D2">
+    <lcc:DescriptorSubType rdf:resource="http://www.openpermissions.co.uk/2014/chub#BriefDescription"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Descriptor"/>
     <lcc:DescriptorType rdf:resource="http://www.rightscom.com/2011/lcc#Annotation"/>
     <chub:ReferenceID>08b45d1038c611e48d9c02d4dc4f2851-D2</chub:ReferenceID>
     <lcc:DescriptorValue>Evening street view Paris 1910</lcc:DescriptorValue>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource3-C1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource3-C1">
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#IsClassRepresentative"/>
     <chub:CategoryValue rdf:resource="http://www.rightscom.com/2011/lcc#False"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource2-D2">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource2-D2">
     <lcc:DescriptorSubType>MaryEvánsPictureID</lcc:DescriptorSubType>
     <lcc:DescriptorValue>RightSource2</lcc:DescriptorValue>
     <lcc:DescriptorType rdf:resource="http://www.rightscom.com/2011/lcc#Identifier"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Descriptor"/>
     <chub:ReferenceID>MaryEváns-RightSource2-D2</chub:ReferenceID>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource4-CSET-C3">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource4-CSET-C3">
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
-    <chub:CategoryValue rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Set"/>
-    <chub:CategoryType rdf:resource="http://www.copyrighthub.co.uk/2014/chub#AssetType"/>
+    <chub:CategoryValue rdf:resource="http://www.openpermissions.co.uk/2014/chub#Set"/>
+    <chub:CategoryType rdf:resource="http://www.openpermissions.co.uk/2014/chub#AssetType"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource1-CSET-L3">
-    <lcc:Entity1Role rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Set"/>
-    <lcc:Entity1 rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource1-CSET"/>
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource1-CSET-L3">
+    <lcc:Entity1Role rdf:resource="http://www.openpermissions.co.uk/2014/chub#Set"/>
+    <lcc:Entity1 rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource1-CSET"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Link"/>
-    <lcc:Entity2 rdf:resource="http://www.copyrighthub.co.uk/2014/hk#08b2a7e038c611e48d9c02d4dc4f2851"/>
-    <lcc:Entity2Role rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Member"/>
+    <lcc:Entity2 rdf:resource="http://www.openpermissions.co.uk/2014/hk#08b2a7e038c611e48d9c02d4dc4f2851"/>
+    <lcc:Entity2Role rdf:resource="http://www.openpermissions.co.uk/2014/chub#Member"/>
     <lcc:LinkType rdf:resource="http://www.rightscom.com/2011/lcc#Asset_Asset"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource3-CSET-L3">
-    <lcc:Entity1Role rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Set"/>
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource3-CSET-L3">
+    <lcc:Entity1Role rdf:resource="http://www.openpermissions.co.uk/2014/chub#Set"/>
     <lcc:LinkType rdf:resource="http://www.rightscom.com/2011/lcc#Asset_Asset"/>
-    <lcc:Entity2Role rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Member"/>
-    <lcc:Entity1 rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource3-CSET"/>
+    <lcc:Entity2Role rdf:resource="http://www.openpermissions.co.uk/2014/chub#Member"/>
+    <lcc:Entity1 rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource3-CSET"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Link"/>
-    <lcc:Entity2 rdf:resource="http://www.copyrighthub.co.uk/2014/hk#08b3bfb838c611e48d9c02d4dc4f2851"/>
+    <lcc:Entity2 rdf:resource="http://www.openpermissions.co.uk/2014/hk#08b3bfb838c611e48d9c02d4dc4f2851"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#08b3bfb838c611e48d9c02d4dc4f2851-D2">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#08b3bfb838c611e48d9c02d4dc4f2851-D2">
     <chub:ReferenceID>08b3bfb838c611e48d9c02d4dc4f2851-D2</chub:ReferenceID>
     <lcc:DescriptorValue>Johnny Depp as Sweeney Todd</lcc:DescriptorValue>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Descriptor"/>
-    <lcc:DescriptorSubType rdf:resource="http://www.copyrighthub.co.uk/2014/chub#BriefDescription"/>
+    <lcc:DescriptorSubType rdf:resource="http://www.openpermissions.co.uk/2014/chub#BriefDescription"/>
     <lcc:DescriptorType rdf:resource="http://www.rightscom.com/2011/lcc#Annotation"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource2-D1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource2-D1">
     <chub:ReferenceID>MaryEváns-RightSource2-D1</chub:ReferenceID>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Descriptor"/>
     <lcc:DescriptorType rdf:resource="http://www.rightscom.com/2011/lcc#Name"/>
     <lcc:DescriptorSubType rdf:resource="http://www.rightscom.com/2011/lcc#Name"/>
     <lcc:DescriptorValue>RightSource2</lcc:DescriptorValue>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-D1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-D1">
     <lcc:DescriptorValue>Mary Evans Picture Library</lcc:DescriptorValue>
     <chub:ReferenceID>MaryEváns-D1</chub:ReferenceID>
     <lcc:DescriptorType rdf:resource="http://www.rightscom.com/2011/lcc#Name"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Descriptor"/>
     <lcc:DescriptorSubType rdf:resource="http://www.rightscom.com/2011/lcc#Name"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#08b45d1038c611e48d9c02d4dc4f2851-D1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#08b45d1038c611e48d9c02d4dc4f2851-D1">
     <lcc:DescriptorSubType>999002</lcc:DescriptorSubType>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Descriptor"/>
     <chub:ReferenceID>08b45d1038c611e48d9c02d4dc4f2851-D1</chub:ReferenceID>
     <lcc:DescriptorValue>AnOtherPhotoID</lcc:DescriptorValue>
     <lcc:DescriptorType rdf:resource="http://www.rightscom.com/2011/lcc#Identifier"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource2-CSET">
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource2-CSET-C1"/>
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource2-CSET">
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource2-CSET-C1"/>
     <chub:ReferenceID>MaryEváns-RightSource2-CSET</chub:ReferenceID>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource2-CSET-C3"/>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource2-CSET-C2"/>
-    <lcc:Category rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource2-CSET-D1"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource2-CSET-C3"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource2-CSET-C2"/>
+    <lcc:Category rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource2-CSET-D1"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Asset"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource2-CSET-C2">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource2-CSET-C2">
     <chub:CategoryValue rdf:resource="http://www.rightscom.com/2011/lcc#Work"/>
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#AssetMode"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#08b2a7e038c611e48d9c02d4dc4f2851-C3">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#08b2a7e038c611e48d9c02d4dc4f2851-C3">
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
-    <chub:CategoryValue rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Photograph"/>
+    <chub:CategoryValue rdf:resource="http://www.openpermissions.co.uk/2014/chub#Photograph"/>
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#VisualWorkType"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-C2">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-C2">
     <chub:CategoryValue rdf:resource="http://www.rightscom.com/2011/lcc#Organization"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#PartyType"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource1-CSET">
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource1-CSET-C3"/>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource1-CSET-C2"/>
-    <lcc:Category rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource1-CSET-D1"/>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource1-CSET-C1"/>
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource1-CSET">
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource1-CSET-C3"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource1-CSET-C2"/>
+    <lcc:Category rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource1-CSET-D1"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource1-CSET-C1"/>
     <chub:ReferenceID>MaryEváns-RightSource1-CSET</chub:ReferenceID>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Asset"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource3">
-    <lcc:Category rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource3-C2"/>
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource3">
+    <lcc:Category rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource3-C2"/>
     <chub:ReferenceID>AnOther-RightSource3</chub:ReferenceID>
-    <lcc:Category rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource3-C1"/>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource3-D2"/>
+    <lcc:Category rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource3-C1"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource3-D2"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Party"/>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource3-D1"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource3-D1"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource3-CSET-C3">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource3-CSET-C3">
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
-    <chub:CategoryValue rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Set"/>
-    <chub:CategoryType rdf:resource="http://www.copyrighthub.co.uk/2014/chub#AssetType"/>
+    <chub:CategoryValue rdf:resource="http://www.openpermissions.co.uk/2014/chub#Set"/>
+    <chub:CategoryType rdf:resource="http://www.openpermissions.co.uk/2014/chub#AssetType"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource2">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource2">
     <chub:ReferenceID>MaryEváns-RightSource2</chub:ReferenceID>
-    <lcc:Category rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource2-C1"/>
-    <lcc:Category rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource2-C2"/>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource2-D2"/>
+    <lcc:Category rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource2-C1"/>
+    <lcc:Category rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource2-C2"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource2-D2"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Party"/>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource2-D1"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource2-D1"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource1-CSET-L1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource1-CSET-L1">
     <lcc:LinkType rdf:resource="http://www.rightscom.com/2011/lcc#Asset_Party"/>
-    <lcc:Entity2 rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource1"/>
+    <lcc:Entity2 rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource1"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Link"/>
-    <lcc:Entity1Role rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Set"/>
-    <lcc:Entity1 rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource1-CSET"/>
-    <lcc:Entity2Role rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Provider"/>
+    <lcc:Entity1Role rdf:resource="http://www.openpermissions.co.uk/2014/chub#Set"/>
+    <lcc:Entity1 rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource1-CSET"/>
+    <lcc:Entity2Role rdf:resource="http://www.openpermissions.co.uk/2014/chub#Provider"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource3-CSET">
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource3-CSET-C3"/>
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource3-CSET">
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource3-CSET-C3"/>
     <chub:ReferenceID>AnOther-RightSource3-CSET</chub:ReferenceID>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource3-CSET-C2"/>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource3-CSET-C1"/>
-    <lcc:Category rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource3-CSET-D1"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource3-CSET-C2"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource3-CSET-C1"/>
+    <lcc:Category rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource3-CSET-D1"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Asset"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#08b2a7e038c611e48d9c02d4dc4f2851-D1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#08b2a7e038c611e48d9c02d4dc4f2851-D1">
     <lcc:DescriptorType rdf:resource="http://www.rightscom.com/2011/lcc#Identifier"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Descriptor"/>
     <lcc:DescriptorValue>MaryEvánsPictureID</lcc:DescriptorValue>
     <chub:ReferenceID>08b2a7e038c611e48d9c02d4dc4f2851-D1</chub:ReferenceID>
     <lcc:DescriptorSubType>100123</lcc:DescriptorSubType>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource4-D1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource4-D1">
     <chub:ReferenceID>AnOther-RightSource4-D1</chub:ReferenceID>
     <lcc:DescriptorValue>RightSource4</lcc:DescriptorValue>
     <lcc:DescriptorType rdf:resource="http://www.rightscom.com/2011/lcc#Name"/>
     <lcc:DescriptorSubType rdf:resource="http://www.rightscom.com/2011/lcc#Name"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Descriptor"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource4-CSET">
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource4-CSET-C1"/>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource4-CSET-C3"/>
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource4-CSET">
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource4-CSET-C1"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource4-CSET-C3"/>
     <chub:ReferenceID>AnOther-RightSource4-CSET</chub:ReferenceID>
-    <lcc:Category rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource4-CSET-D1"/>
+    <lcc:Category rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource4-CSET-D1"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Asset"/>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource4-CSET-C2"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource4-CSET-C2"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource1">
     <chub:ReferenceID>MaryEváns-RightSource1</chub:ReferenceID>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource1-D1"/>
-    <lcc:Category rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource1-C2"/>
-    <lcc:Category rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource1-C1"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource1-D1"/>
+    <lcc:Category rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource1-C2"/>
+    <lcc:Category rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource1-C1"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Party"/>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource1-D2"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource1-D2"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource1-D2">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource1-D2">
     <lcc:DescriptorType rdf:resource="http://www.rightscom.com/2011/lcc#Identifier"/>
     <lcc:DescriptorValue>RightSource1</lcc:DescriptorValue>
     <lcc:DescriptorSubType>MaryEvánsPictureID</lcc:DescriptorSubType>
     <chub:ReferenceID>MaryEváns-RightSource1-D2</chub:ReferenceID>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Descriptor"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-D1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-D1">
     <lcc:DescriptorValue>AnOther Ltd</lcc:DescriptorValue>
     <lcc:DescriptorSubType rdf:resource="http://www.rightscom.com/2011/lcc#Name"/>
     <lcc:DescriptorType rdf:resource="http://www.rightscom.com/2011/lcc#Name"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Descriptor"/>
     <chub:ReferenceID>AnOther-D1</chub:ReferenceID>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#08b3bfb838c611e48d9c02d4dc4f2851-C1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#08b3bfb838c611e48d9c02d4dc4f2851-C1">
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
     <chub:CategoryValue rdf:resource="http://www.rightscom.com/2011/lcc#False"/>
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#IsClassRepresentative"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource4-D2">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource4-D2">
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Descriptor"/>
     <lcc:DescriptorType rdf:resource="http://www.rightscom.com/2011/lcc#Identifier"/>
     <chub:ReferenceID>AnOther-RightSource4-D2</chub:ReferenceID>
     <lcc:DescriptorSubType>AnOtherPhotoID</lcc:DescriptorSubType>
     <lcc:DescriptorValue>RightSource4</lcc:DescriptorValue>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource4">
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource4-D2"/>
-    <lcc:Category rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource4-C2"/>
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource4">
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource4-D2"/>
+    <lcc:Category rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource4-C2"/>
     <chub:ReferenceID>AnOther-RightSource4</chub:ReferenceID>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Party"/>
-    <lcc:Category rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource4-C1"/>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource4-D1"/>
+    <lcc:Category rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource4-C1"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource4-D1"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#08b3343038c611e48d9c02d4dc4f2851-C1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#08b3343038c611e48d9c02d4dc4f2851-C1">
     <chub:CategoryValue rdf:resource="http://www.rightscom.com/2011/lcc#False"/>
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#IsClassRepresentative"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource2-C2">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource2-C2">
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#PartyType"/>
-    <chub:CategoryValue rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Unknown"/>
+    <chub:CategoryValue rdf:resource="http://www.openpermissions.co.uk/2014/chub#Unknown"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource1-CSET-C1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource1-CSET-C1">
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#IsClassRepresentative"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
     <chub:CategoryValue rdf:resource="http://www.rightscom.com/2011/lcc#False"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#08b2a7e038c611e48d9c02d4dc4f2851-C2">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#08b2a7e038c611e48d9c02d4dc4f2851-C2">
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#AssetMode"/>
     <chub:CategoryValue rdf:resource="http://www.rightscom.com/2011/lcc#Work"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource3-D1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource3-D1">
     <chub:ReferenceID>AnOther-RightSource3-D1</chub:ReferenceID>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Descriptor"/>
     <lcc:DescriptorType rdf:resource="http://www.rightscom.com/2011/lcc#Name"/>
     <lcc:DescriptorSubType rdf:resource="http://www.rightscom.com/2011/lcc#Name"/>
     <lcc:DescriptorValue>RightSource3</lcc:DescriptorValue>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource3-CSET-D1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource3-CSET-D1">
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Descriptor"/>
     <chub:ReferenceID>AnOther-RightSource3-CSET-D1</chub:ReferenceID>
-    <lcc:DescriptorSubType rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Description"/>
+    <lcc:DescriptorSubType rdf:resource="http://www.openpermissions.co.uk/2014/chub#Description"/>
     <lcc:DescriptorType rdf:resource="http://www.rightscom.com/2011/lcc#Annotation"/>
-    <lcc:DescriptorValue>http://www.copyrighthub.co.uk/2014/hk#AnOther Ltd-RightSource3</lcc:DescriptorValue>
+    <lcc:DescriptorValue>http://www.openpermissions.co.uk/2014/hk#AnOther Ltd-RightSource3</lcc:DescriptorValue>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#08b2a7e038c611e48d9c02d4dc4f2851-D2">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#08b2a7e038c611e48d9c02d4dc4f2851-D2">
     <lcc:DescriptorType rdf:resource="http://www.rightscom.com/2011/lcc#Annotation"/>
     <chub:ReferenceID>08b2a7e038c611e48d9c02d4dc4f2851-D2</chub:ReferenceID>
     <lcc:DescriptorValue>Sunset over a Caribbean beach</lcc:DescriptorValue>
-    <lcc:DescriptorSubType rdf:resource="http://www.copyrighthub.co.uk/2014/chub#BriefDescription"/>
+    <lcc:DescriptorSubType rdf:resource="http://www.openpermissions.co.uk/2014/chub#BriefDescription"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Descriptor"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource1-CSET-C2">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource1-CSET-C2">
     <chub:CategoryValue rdf:resource="http://www.rightscom.com/2011/lcc#Work"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#AssetMode"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#08b45d1038c611e48d9c02d4dc4f2851">
-    <lcc:Category rdf:resource="http://www.copyrighthub.co.uk/2014/hk#08b45d1038c611e48d9c02d4dc4f2851-D2"/>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#08b45d1038c611e48d9c02d4dc4f2851-C3"/>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#08b45d1038c611e48d9c02d4dc4f2851-C1"/>
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#08b45d1038c611e48d9c02d4dc4f2851">
+    <lcc:Category rdf:resource="http://www.openpermissions.co.uk/2014/hk#08b45d1038c611e48d9c02d4dc4f2851-D2"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#08b45d1038c611e48d9c02d4dc4f2851-C3"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#08b45d1038c611e48d9c02d4dc4f2851-C1"/>
     <chub:ReferenceID>08b45d1038c611e48d9c02d4dc4f2851</chub:ReferenceID>
-    <lcc:Category rdf:resource="http://www.copyrighthub.co.uk/2014/hk#08b45d1038c611e48d9c02d4dc4f2851-D1"/>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#08b45d1038c611e48d9c02d4dc4f2851-C2"/>
+    <lcc:Category rdf:resource="http://www.openpermissions.co.uk/2014/hk#08b45d1038c611e48d9c02d4dc4f2851-D1"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#08b45d1038c611e48d9c02d4dc4f2851-C2"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Asset"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#08b3343038c611e48d9c02d4dc4f2851-C3">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#08b3343038c611e48d9c02d4dc4f2851-C3">
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#VisualWorkType"/>
-    <chub:CategoryValue rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Photograph"/>
+    <chub:CategoryValue rdf:resource="http://www.openpermissions.co.uk/2014/chub#Photograph"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource3-CSET-L2">
-    <lcc:Entity2 rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther"/>
-    <lcc:Entity1Role rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Set"/>
-    <lcc:Entity2Role rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Providee"/>
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource3-CSET-L2">
+    <lcc:Entity2 rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther"/>
+    <lcc:Entity1Role rdf:resource="http://www.openpermissions.co.uk/2014/chub#Set"/>
+    <lcc:Entity2Role rdf:resource="http://www.openpermissions.co.uk/2014/chub#Providee"/>
     <lcc:LinkType rdf:resource="http://www.rightscom.com/2011/lcc#Asset_Party"/>
-    <lcc:Entity1 rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource3-CSET"/>
+    <lcc:Entity1 rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource3-CSET"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Link"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#08b2a7e038c611e48d9c02d4dc4f2851">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#08b2a7e038c611e48d9c02d4dc4f2851">
     <chub:ReferenceID>08b2a7e038c611e48d9c02d4dc4f2851</chub:ReferenceID>
-    <lcc:Category rdf:resource="http://www.copyrighthub.co.uk/2014/hk#08b2a7e038c611e48d9c02d4dc4f2851-D2"/>
-    <lcc:Category rdf:resource="http://www.copyrighthub.co.uk/2014/hk#08b2a7e038c611e48d9c02d4dc4f2851-D1"/>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#08b2a7e038c611e48d9c02d4dc4f2851-C3"/>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#08b2a7e038c611e48d9c02d4dc4f2851-C1"/>
+    <lcc:Category rdf:resource="http://www.openpermissions.co.uk/2014/hk#08b2a7e038c611e48d9c02d4dc4f2851-D2"/>
+    <lcc:Category rdf:resource="http://www.openpermissions.co.uk/2014/hk#08b2a7e038c611e48d9c02d4dc4f2851-D1"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#08b2a7e038c611e48d9c02d4dc4f2851-C3"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#08b2a7e038c611e48d9c02d4dc4f2851-C1"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Asset"/>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#08b2a7e038c611e48d9c02d4dc4f2851-C2"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#08b2a7e038c611e48d9c02d4dc4f2851-C2"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource4-CSET-D1">
-    <lcc:DescriptorSubType rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Description"/>
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource4-CSET-D1">
+    <lcc:DescriptorSubType rdf:resource="http://www.openpermissions.co.uk/2014/chub#Description"/>
     <lcc:DescriptorType rdf:resource="http://www.rightscom.com/2011/lcc#Annotation"/>
-    <lcc:DescriptorValue>http://www.copyrighthub.co.uk/2014/hk#AnOther Ltd-RightSource4</lcc:DescriptorValue>
+    <lcc:DescriptorValue>http://www.openpermissions.co.uk/2014/hk#AnOther Ltd-RightSource4</lcc:DescriptorValue>
     <chub:ReferenceID>AnOther-RightSource4-CSET-D1</chub:ReferenceID>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Descriptor"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-C1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-C1">
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
     <chub:CategoryValue rdf:resource="http://www.rightscom.com/2011/lcc#False"/>
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#IsClassRepresentative"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource1-C1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource1-C1">
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#IsClassRepresentative"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
     <chub:CategoryValue rdf:resource="http://www.rightscom.com/2011/lcc#False"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource4-CSET-L3">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource4-CSET-L3">
     <lcc:LinkType rdf:resource="http://www.rightscom.com/2011/lcc#Asset_Asset"/>
-    <lcc:Entity2Role rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Member"/>
-    <lcc:Entity2 rdf:resource="http://www.copyrighthub.co.uk/2014/hk#08b45d1038c611e48d9c02d4dc4f2851"/>
-    <lcc:Entity1Role rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Set"/>
-    <lcc:Entity1 rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource4-CSET"/>
+    <lcc:Entity2Role rdf:resource="http://www.openpermissions.co.uk/2014/chub#Member"/>
+    <lcc:Entity2 rdf:resource="http://www.openpermissions.co.uk/2014/hk#08b45d1038c611e48d9c02d4dc4f2851"/>
+    <lcc:Entity1Role rdf:resource="http://www.openpermissions.co.uk/2014/chub#Set"/>
+    <lcc:Entity1 rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource4-CSET"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Link"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource2-C1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource2-C1">
     <chub:CategoryValue rdf:resource="http://www.rightscom.com/2011/lcc#False"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#IsClassRepresentative"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns">
-    <lcc:Category rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-C2"/>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-D1"/>
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns">
+    <lcc:Category rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-C2"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-D1"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Party"/>
     <chub:ReferenceID>MaryEváns</chub:ReferenceID>
-    <lcc:Category rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-C1"/>
+    <lcc:Category rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-C1"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#08b3343038c611e48d9c02d4dc4f2851-D2">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#08b3343038c611e48d9c02d4dc4f2851-D2">
     <lcc:DescriptorType rdf:resource="http://www.rightscom.com/2011/lcc#Annotation"/>
-    <lcc:DescriptorSubType rdf:resource="http://www.copyrighthub.co.uk/2014/chub#BriefDescription"/>
+    <lcc:DescriptorSubType rdf:resource="http://www.openpermissions.co.uk/2014/chub#BriefDescription"/>
     <chub:ReferenceID>08b3343038c611e48d9c02d4dc4f2851-D2</chub:ReferenceID>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Descriptor"/>
     <lcc:DescriptorValue>Polar bear on an ice floe</lcc:DescriptorValue>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource3-CSET-L1">
-    <lcc:Entity2 rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource3"/>
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource3-CSET-L1">
+    <lcc:Entity2 rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource3"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Link"/>
     <lcc:LinkType rdf:resource="http://www.rightscom.com/2011/lcc#Asset_Party"/>
-    <lcc:Entity1 rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource3-CSET"/>
-    <lcc:Entity2Role rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Provider"/>
-    <lcc:Entity1Role rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Set"/>
+    <lcc:Entity1 rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource3-CSET"/>
+    <lcc:Entity2Role rdf:resource="http://www.openpermissions.co.uk/2014/chub#Provider"/>
+    <lcc:Entity1Role rdf:resource="http://www.openpermissions.co.uk/2014/chub#Set"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource4-CSET-L2">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource4-CSET-L2">
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Link"/>
-    <lcc:Entity1 rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource4-CSET"/>
-    <lcc:Entity2Role rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Providee"/>
-    <lcc:Entity1Role rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Set"/>
-    <lcc:Entity2 rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther"/>
+    <lcc:Entity1 rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource4-CSET"/>
+    <lcc:Entity2Role rdf:resource="http://www.openpermissions.co.uk/2014/chub#Providee"/>
+    <lcc:Entity1Role rdf:resource="http://www.openpermissions.co.uk/2014/chub#Set"/>
+    <lcc:Entity2 rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther"/>
     <lcc:LinkType rdf:resource="http://www.rightscom.com/2011/lcc#Asset_Party"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-C2">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-C2">
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#PartyType"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
     <chub:CategoryValue rdf:resource="http://www.rightscom.com/2011/lcc#Organization"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#08b3bfb838c611e48d9c02d4dc4f2851-D1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#08b3bfb838c611e48d9c02d4dc4f2851-D1">
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Descriptor"/>
     <lcc:DescriptorType rdf:resource="http://www.rightscom.com/2011/lcc#Identifier"/>
     <chub:ReferenceID>08b3bfb838c611e48d9c02d4dc4f2851-D1</chub:ReferenceID>
     <lcc:DescriptorSubType>999001</lcc:DescriptorSubType>
     <lcc:DescriptorValue>AnOtherPhotoID</lcc:DescriptorValue>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource2-CSET-C3">
-    <chub:CategoryValue rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Set"/>
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource2-CSET-C3">
+    <chub:CategoryValue rdf:resource="http://www.openpermissions.co.uk/2014/chub#Set"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
-    <chub:CategoryType rdf:resource="http://www.copyrighthub.co.uk/2014/chub#AssetType"/>
+    <chub:CategoryType rdf:resource="http://www.openpermissions.co.uk/2014/chub#AssetType"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource1-CSET-D1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource1-CSET-D1">
     <lcc:DescriptorType rdf:resource="http://www.rightscom.com/2011/lcc#Annotation"/>
-    <lcc:DescriptorValue>http://www.copyrighthub.co.uk/2014/hk#Mary Evans Picture Library-RightSource1</lcc:DescriptorValue>
+    <lcc:DescriptorValue>http://www.openpermissions.co.uk/2014/hk#Mary Evans Picture Library-RightSource1</lcc:DescriptorValue>
     <chub:ReferenceID>MaryEváns-RightSource1-CSET-D1</chub:ReferenceID>
-    <lcc:DescriptorSubType rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Description"/>
+    <lcc:DescriptorSubType rdf:resource="http://www.openpermissions.co.uk/2014/chub#Description"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Descriptor"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource4-C1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource4-C1">
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
     <chub:CategoryValue rdf:resource="http://www.rightscom.com/2011/lcc#False"/>
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#IsClassRepresentative"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource3-C2">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource3-C2">
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#PartyType"/>
-    <chub:CategoryValue rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Unknown"/>
+    <chub:CategoryValue rdf:resource="http://www.openpermissions.co.uk/2014/chub#Unknown"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource1-D1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource1-D1">
     <lcc:DescriptorValue>RightSource1</lcc:DescriptorValue>
     <lcc:DescriptorType rdf:resource="http://www.rightscom.com/2011/lcc#Name"/>
     <chub:ReferenceID>MaryEváns-RightSource1-D1</chub:ReferenceID>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Descriptor"/>
     <lcc:DescriptorSubType rdf:resource="http://www.rightscom.com/2011/lcc#Name"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#08b45d1038c611e48d9c02d4dc4f2851-C3">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#08b45d1038c611e48d9c02d4dc4f2851-C3">
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#VisualWorkType"/>
-    <chub:CategoryValue rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Photograph"/>
+    <chub:CategoryValue rdf:resource="http://www.openpermissions.co.uk/2014/chub#Photograph"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther">
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Party"/>
-    <lcc:Category rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-C2"/>
-    <lcc:Descriptor rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-D1"/>
+    <lcc:Category rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-C2"/>
+    <lcc:Descriptor rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-D1"/>
     <chub:ReferenceID>AnOther</chub:ReferenceID>
-    <lcc:Category rdf:resource="http://www.copyrighthub.co.uk/2014/hk#AnOther-C1"/>
+    <lcc:Category rdf:resource="http://www.openpermissions.co.uk/2014/hk#AnOther-C1"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource3-CSET-C1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource3-CSET-C1">
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#IsClassRepresentative"/>
     <chub:CategoryValue rdf:resource="http://www.rightscom.com/2011/lcc#False"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource2-CSET-D1">
-    <lcc:DescriptorSubType rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Description"/>
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource2-CSET-D1">
+    <lcc:DescriptorSubType rdf:resource="http://www.openpermissions.co.uk/2014/chub#Description"/>
     <lcc:DescriptorType rdf:resource="http://www.rightscom.com/2011/lcc#Annotation"/>
-    <lcc:DescriptorValue>http://www.copyrighthub.co.uk/2014/hk#Mary Evans Picture Library-RightSource2</lcc:DescriptorValue>
+    <lcc:DescriptorValue>http://www.openpermissions.co.uk/2014/hk#Mary Evans Picture Library-RightSource2</lcc:DescriptorValue>
     <chub:ReferenceID>MaryEváns-RightSource2-CSET-D1</chub:ReferenceID>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Descriptor"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource1-CSET-L2">
-    <lcc:Entity2 rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns"/>
-    <lcc:Entity1 rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource1-CSET"/>
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource1-CSET-L2">
+    <lcc:Entity2 rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns"/>
+    <lcc:Entity1 rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource1-CSET"/>
     <lcc:LinkType rdf:resource="http://www.rightscom.com/2011/lcc#Asset_Party"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Link"/>
-    <lcc:Entity1Role rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Set"/>
-    <lcc:Entity2Role rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Providee"/>
+    <lcc:Entity1Role rdf:resource="http://www.openpermissions.co.uk/2014/chub#Set"/>
+    <lcc:Entity2Role rdf:resource="http://www.openpermissions.co.uk/2014/chub#Providee"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#08b3bfb838c611e48d9c02d4dc4f2851-C3">
-    <chub:CategoryValue rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Photograph"/>
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#08b3bfb838c611e48d9c02d4dc4f2851-C3">
+    <chub:CategoryValue rdf:resource="http://www.openpermissions.co.uk/2014/chub#Photograph"/>
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#VisualWorkType"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#08b3343038c611e48d9c02d4dc4f2851-D1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#08b3343038c611e48d9c02d4dc4f2851-D1">
     <lcc:DescriptorType rdf:resource="http://www.rightscom.com/2011/lcc#Identifier"/>
     <chub:ReferenceID>08b3343038c611e48d9c02d4dc4f2851-D1</chub:ReferenceID>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Descriptor"/>
     <lcc:DescriptorSubType>100456</lcc:DescriptorSubType>
     <lcc:DescriptorValue>MaryEvánsPictureID</lcc:DescriptorValue>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#08b45d1038c611e48d9c02d4dc4f2851-C2">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#08b45d1038c611e48d9c02d4dc4f2851-C2">
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#AssetMode"/>
     <chub:CategoryValue rdf:resource="http://www.rightscom.com/2011/lcc#Work"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#08b2a7e038c611e48d9c02d4dc4f2851-C1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#08b2a7e038c611e48d9c02d4dc4f2851-C1">
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#IsClassRepresentative"/>
     <chub:CategoryValue rdf:resource="http://www.rightscom.com/2011/lcc#False"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource4-CSET-C1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource4-CSET-C1">
     <chub:CategoryValue rdf:resource="http://www.rightscom.com/2011/lcc#False"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#IsClassRepresentative"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource4-CSET-C2">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource4-CSET-C2">
     <chub:CategoryValue rdf:resource="http://www.rightscom.com/2011/lcc#Work"/>
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#AssetMode"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#08b3343038c611e48d9c02d4dc4f2851-C2">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#08b3343038c611e48d9c02d4dc4f2851-C2">
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#AssetMode"/>
     <chub:CategoryValue rdf:resource="http://www.rightscom.com/2011/lcc#Work"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource1-C2">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource1-C2">
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#PartyType"/>
-    <chub:CategoryValue rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Unknown"/>
+    <chub:CategoryValue rdf:resource="http://www.openpermissions.co.uk/2014/chub#Unknown"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource3-D2">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource3-D2">
     <lcc:DescriptorType rdf:resource="http://www.rightscom.com/2011/lcc#Identifier"/>
     <lcc:DescriptorValue>RightSource3</lcc:DescriptorValue>
     <chub:ReferenceID>AnOther-RightSource3-D2</chub:ReferenceID>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Descriptor"/>
     <lcc:DescriptorSubType>AnOtherPhotoID</lcc:DescriptorSubType>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource2-CSET-L2">
-    <lcc:Entity1 rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource2-CSET"/>
-    <lcc:Entity1Role rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Set"/>
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource2-CSET-L2">
+    <lcc:Entity1 rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource2-CSET"/>
+    <lcc:Entity1Role rdf:resource="http://www.openpermissions.co.uk/2014/chub#Set"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Link"/>
-    <lcc:Entity2Role rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Providee"/>
-    <lcc:Entity2 rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns"/>
+    <lcc:Entity2Role rdf:resource="http://www.openpermissions.co.uk/2014/chub#Providee"/>
+    <lcc:Entity2 rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns"/>
     <lcc:LinkType rdf:resource="http://www.rightscom.com/2011/lcc#Asset_Party"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource4-C2">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource4-C2">
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#PartyType"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
-    <chub:CategoryValue rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Unknown"/>
+    <chub:CategoryValue rdf:resource="http://www.openpermissions.co.uk/2014/chub#Unknown"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource2-CSET-L3">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource2-CSET-L3">
     <lcc:LinkType rdf:resource="http://www.rightscom.com/2011/lcc#Asset_Asset"/>
-    <lcc:Entity1 rdf:resource="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource2-CSET"/>
-    <lcc:Entity2Role rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Member"/>
-    <lcc:Entity1Role rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Set"/>
-    <lcc:Entity2 rdf:resource="http://www.copyrighthub.co.uk/2014/hk#08b3343038c611e48d9c02d4dc4f2851"/>
+    <lcc:Entity1 rdf:resource="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource2-CSET"/>
+    <lcc:Entity2Role rdf:resource="http://www.openpermissions.co.uk/2014/chub#Member"/>
+    <lcc:Entity1Role rdf:resource="http://www.openpermissions.co.uk/2014/chub#Set"/>
+    <lcc:Entity2 rdf:resource="http://www.openpermissions.co.uk/2014/hk#08b3343038c611e48d9c02d4dc4f2851"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Link"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#MaryEváns-RightSource1-CSET-C3">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#MaryEváns-RightSource1-CSET-C3">
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
-    <chub:CategoryValue rdf:resource="http://www.copyrighthub.co.uk/2014/chub#Set"/>
-    <chub:CategoryType rdf:resource="http://www.copyrighthub.co.uk/2014/chub#AssetType"/>
+    <chub:CategoryValue rdf:resource="http://www.openpermissions.co.uk/2014/chub#Set"/>
+    <chub:CategoryType rdf:resource="http://www.openpermissions.co.uk/2014/chub#AssetType"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-RightSource3-CSET-C2">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-RightSource3-CSET-C2">
     <chub:CategoryValue rdf:resource="http://www.rightscom.com/2011/lcc#Work"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#AssetMode"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#08b45d1038c611e48d9c02d4dc4f2851-C1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#08b45d1038c611e48d9c02d4dc4f2851-C1">
     <chub:CategoryValue rdf:resource="http://www.rightscom.com/2011/lcc#False"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#IsClassRepresentative"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.copyrighthub.co.uk/2014/hk#AnOther-C1">
+  <rdf:Description rdf:about="http://www.openpermissions.co.uk/2014/hk#AnOther-C1">
     <chub:CategoryType rdf:resource="http://www.rightscom.com/2011/lcc#IsClassRepresentative"/>
     <lcc:EntityType rdf:resource="http://www.rightscom.com/2011/lcc#Category"/>
     <chub:CategoryValue rdf:resource="http://www.rightscom.com/2011/lcc#False"/>

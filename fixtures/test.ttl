@@ -5,7 +5,7 @@
     chubindex:id "my_id"^^xsd:string ;
     chubindex:id_type "my_id_type"^^xsd:string .
 
-<https://copyrighthub.org/s0/hub1/asset/testco/my_id_type/my_id> op:alsoIdentifiedBy <https://digicat.io/ns/xid/my_id_type/my_id>;
+<https://openpermissions.org/s0/hub1/asset/testco/my_id_type/my_id> op:alsoIdentifiedBy <https://digicat.io/ns/xid/my_id_type/my_id>;
     chubindex:repo "repo2"^^xsd:string ;
     chubindex:type "asset"^^xsd:string .
 
@@ -13,7 +13,7 @@
     chubindex:id "flibble"^^xsd:string ;
     chubindex:id_type "foo_id_type"^^xsd:string .
 
-<https://copyrighthub.org/s0/hub1/asset/testco/foo_id_type/flibble> op:alsoIdentifiedBy <https://digicat.io/ns/xid/foo_id_type/flibble>;
+<https://openpermissions.org/s0/hub1/asset/testco/foo_id_type/flibble> op:alsoIdentifiedBy <https://digicat.io/ns/xid/foo_id_type/flibble>;
     chubindex:repo "repo2"^^xsd:string ;
     chubindex:type "asset"^^xsd:string .
 
@@ -21,7 +21,7 @@
     chubindex:id "some_value"^^xsd:string ;
     chubindex:id_type "chub"^^xsd:string .
 
-<https://copyrighthub.org/s0/hub1/asset/digicat/chub/some_value> op:alsoIdentifiedBy <https://digicat.io/ns/xid/chub/some_value>;
+<https://openpermissions.org/s0/hub1/asset/digicat/chub/some_value> op:alsoIdentifiedBy <https://digicat.io/ns/xid/chub/some_value>;
     chubindex:repo "repo2"^^xsd:string ;
     chubindex:type "asset"^^xsd:string .
 
@@ -29,7 +29,7 @@
     chubindex:id "ISBN01"^^xsd:string ;
     chubindex:id_type "ISBN"^^xsd:string .
 
-<https://copyrighthub.org/s0/hub1/asset/digicat/chub/some_value> op:alsoIdentifiedBy <https://digicat.io/ns/xid/ISBN/ISBN01>;
+<https://openpermissions.org/s0/hub1/asset/digicat/chub/some_value> op:alsoIdentifiedBy <https://digicat.io/ns/xid/ISBN/ISBN01>;
     chubindex:repo "repo2"^^xsd:string ;
     chubindex:type "asset"^^xsd:string .
 
@@ -37,7 +37,7 @@
     chubindex:id "testco01"^^xsd:string ;
     chubindex:id_type "testcopictureid"^^xsd:string .
 
-<https://copyrighthub.org/s0/hub1/asset/digicat/testcopictureid/testco01> op:alsoIdentifiedBy <https://digicat.io/ns/xid/testcopictureid/testco01>;
+<https://openpermissions.org/s0/hub1/asset/digicat/testcopictureid/testco01> op:alsoIdentifiedBy <https://digicat.io/ns/xid/testcopictureid/testco01>;
     chubindex:repo "repo2"^^xsd:string ;
     chubindex:type "asset"^^xsd:string .
 
@@ -45,6 +45,6 @@
     chubindex:id "1010101"^^xsd:string ;
     chubindex:id_type "testcopictureid"^^xsd:string .
 
-<https://copyrighthub.org/s0/hub1/asset/digicat/testcopictureid/1010101> op:alsoIdentifiedBy <https://digicat.io/ns/xid/testcopictureid/1010101>;
+<https://openpermissions.org/s0/hub1/asset/digicat/testcopictureid/1010101> op:alsoIdentifiedBy <https://digicat.io/ns/xid/testcopictureid/1010101>;
     chubindex:repo "repo2"^^xsd:string ;
     chubindex:type "asset"^^xsd:string .
