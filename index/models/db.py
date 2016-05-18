@@ -50,18 +50,33 @@ NAMESPACE_ASSET = """
 </properties>
 """
 
-TEMPLATE_PATH_ELEM = string.Template("""
+# %s is the initial query that build entity_uri
+# the starting point of the query
+LEVEL_1_REL_SUBQUERY = """
+{
+    SELECT ?via_hk ?via_id ?to_hk WHERE {
+        %s .
+        BIND (?entity_uri AS ?via_hk) .
+        ?via_hk op:alsoIdentifiedBy ?via_id.
+        ?via_id ^op:alsoIdentifiedBy? ?to_hk .
+        FILTER (?to_hk != ?via_hk) .
+    }
+}
+"""
+
+LEVEL_N_REL_SUBQUERY = string.Template("""
 $from_hk op:alsoIdentifiedBy $via_id .
 FILTER ( $via_id != ?origid ) .
 $via_id  ^op:alsoIdentifiedBy $to_hk .
 FILTER ( $to_hk NOT IN ( $forbidden ) ) .
 """)
 
-OUTER_SUBQUERY = string.Template("""
+OUTER_REL_SUBQUERY = string.Template("""
 { SELECT ?group (CONCAT("[", GROUP_CONCAT(?json;separator=","),"]") AS ?relations ) WHERE {
     BIND ( "constant" as ?group ) .
     { SELECT DISTINCT ?to_hk ?to_repo ?via_id ?via_id_id_value ?via_id_id_type ?via_hk WHERE {
-       $idquery
+       $relquery
+
        OPTIONAL { ?via_id chubindex:id ?via_id_id_value . }
        OPTIONAL { ?via_id chubindex:id_type ?via_id_id_type . }
        OPTIONAL { ?to_hk chubindex:repo ?to_repo . }
@@ -75,18 +90,11 @@ GROUP BY ?group
 }
 """)
 
-LEVEL1_INNER_SUBQUERY = """
-{
-    SELECT ?via_hk ?via_id ?to_hk WHERE {
-        %s .
-        BIND (?entity_uri AS ?via_hk) .
-        ?via_hk op:alsoIdentifiedBy ?via_id.
-        ?via_id ^op:alsoIdentifiedBy? ?to_hk .
-        FILTER (?to_hk != ?via_hk) .
-    }
-}
-"""
-
+# This is the main query for querying an entry (a single part source_id, source_id_type) in the index
+#
+# Fist part of the query retrieve repositories directly associated with the id.
+# Second part of the query is $relquery and is built in python to a specified recursion level,
+# Thirs part just reassociates the query parameters to the results.
 QUERY_TEMPLATE = string.Template("""
 {
     {
@@ -168,16 +176,16 @@ class DbInterface(object):
             return "BIND (\"[]\" AS ?relations) ."
 
         # LEVEL 1 query
-        mrexpr = [LEVEL1_INNER_SUBQUERY % (initial_query,)]
+        mrexpr = [LEVEL_1_REL_SUBQUERY % (initial_query,)]
 
-        # DEEPER QUERIES
+        # DEEPER QUERIES (BUILD RECURSIVELY)
         for i in range(1, maxdepth):
             cexpr = list()
             cexpr.append(initial_query + ".")
             cexpr.append("BIND (?entity_uri AS ?via_hk0) .")
             for j in range(i):
                 forbidden_nodes = " , ".join(map(lambda ci: "?via_hk%d" % (ci,), range(j + 1)))
-                cexpr.append(TEMPLATE_PATH_ELEM.substitute(
+                cexpr.append(LEVEL_N_REL_SUBQUERY.substitute(
                     via_id="?via_id" + str(j + 1),
                     to_hk="?via_hk" + str(j + 1),
                     from_hk="?via_hk" + str(j),
@@ -187,7 +195,7 @@ class DbInterface(object):
 
             forbidden_nodes = " , ".join(map(lambda ci: "?via_hk%d" % (ci,), range(i + 1)))
             cexpr.append("BIND (?via_hk%d as ?via_hk) ." % (i,))
-            cexpr.append(TEMPLATE_PATH_ELEM.substitute(
+            cexpr.append(LEVEL_N_REL_SUBQUERY.substitute(
                 via_id="?via_id",
                 to_hk="?to_hk",
                 from_hk="?via_hk",
@@ -197,11 +205,12 @@ class DbInterface(object):
             cexpr = "{ SELECT ?via_hk ?via_id ?to_hk WHERE { \n %s \n } }\n" % ("\n".join(cexpr),)
             mrexpr.append(cexpr)
 
-        return OUTER_SUBQUERY.substitute(idquery="{ %s }" % (" UNION ".join(mrexpr),))
+        # UNION FOR LEVEL FROM 1 TO N
+        return OUTER_REL_SUBQUERY.substitute(relquery="{ %s }" % (" UNION ".join(mrexpr),))
 
     def _format_subquery(self, source_id_type, source_id, maxdepth=2):
         """
-        Get list of repositories
+        Get list of repositories and relations for one query (pair source_id_type, source_id)
 
         :param source_id_type: id type
         :param source_id: id
@@ -216,10 +225,13 @@ class DbInterface(object):
         #  ?a r{0,10} ?b
         # so it is better to implement this by hand
         # also even with range-length match it is impossible with
-        # sparql expressions to simply avoid paths and to get shortest path
+        # SPARQL expressions to simply avoid paths and to get shortest path
         # in a graph that is not a tree.
 
         if source_id_type == HUB_KEY:
+            # NOTE: Here we expect entity_id. It is assumed that query to hub_key are resolved via
+            # via the resolution service, i.e.  or contacting directly the right repo for hubkey s1,
+            # or using the source_id_type and source_id for hubkey s0
             if source_id.startswith("http://openpermissions.org/ns/id/"):
                 source_id = source_id.split('/')[-1]
             initial_query = "  BIND ( id:{entity_id} AS ?entity_uri ) ".format(entity_id=str(source_id))
@@ -230,7 +242,8 @@ class DbInterface(object):
         relquery = self._format_relation_subquery(source_id_type, source_id, initial_query, maxdepth)
 
         query = QUERY_TEMPLATE.substitute(source_id_bind=("id:%s" if (source_id_type == HUB_KEY) else '"%s"') % (source_id,),
-                                          source_id_type=source_id_type, relquery=relquery,
+                                          source_id_type=source_id_type,
+                                          relquery=relquery,
                                           initial_query=initial_query)
         return query
 
@@ -259,6 +272,8 @@ class DbInterface(object):
 
         results = []
         in_results = {}
+
+        # reformat the results that are in the index
         for x in queryresults:
             nx = x.copy()
             if nx['source_id_type'] == HUB_KEY:
@@ -273,6 +288,7 @@ class DbInterface(object):
             results.append(nx)
             in_results[(nx['source_id_type'], nx['source_id'])] = 1
 
+        # add entries for the elements that have not been found in the index
         for x in ids:
             if (x['source_id_type'], x['source_id']) not in in_results:
                 nx = x.copy()
