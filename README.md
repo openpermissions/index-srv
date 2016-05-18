@@ -1,13 +1,21 @@
 The Open Permissions Plaform Index Service
 ==========================================
 
+Useful Links
+============
+* [Open Permissions Platform](http://openpermissions.org)
+* [Low level Design](https://github.com/openpermissions/index-srv/blob/master/documents/markdown/low-level-design.md)
+* [API Documentation] (https://github.com/openpermissions/index-srv/blob/master/documents/apiary/api.md)
+
+Service Overview
+================
 This repository contains the Index service which acts as a routing service.
 It includes a scheduling service which periodically polls repository services
 for newly added assets and it keeps track of that information for quick retrieval 
 by storing it in a local database (using shelve).
 
 Running locally
-===============
+---------------
 #### blazegraph data store
 
 Follow the instruction on [blazegraph](https://www.blazegraph.com/) to set up a data store for the index service.
@@ -33,7 +41,7 @@ python index/ -t [--test]
 
 
 Locally configurable options
-===========================
+----------------------------
 
 ### Service options
 | Option name        | Description                           |
@@ -99,7 +107,7 @@ Locally configurable options
 
 
 Running tests and generating code coverage
-==========================================
+------------------------------------------
 To have a "clean" target from build artifacts:
 
 ```
