@@ -49,6 +49,9 @@ define('default_poll_interval', default=60 * 60 * 6,
 define('max_poll_error_delay_factor', default=5,
        help='Maximum multiplication factor to delay requests to repositories '
        'that responded with an error')
+define('max_repository_pages', default=5,
+       help='The maximum number of pages to fetch from a repository before'
+       'moving onto another repository')
 define('notification_poll_interval', default=0.1,
        help='Time to wait before rechecking for notifications from other threads')
 define('concurrency', default=2,
@@ -462,14 +465,17 @@ class Manager(object):
 
     @coroutine
     def _fetch_identifiers(self, repo_id, from_time, location):
-        result_to = None
         client = yield repository_service_client(location)
+        logging.info('Getting IDs for {} from {}'.format(repo_id, location))
+
+        page = 1
         endpoint = client.repository.repositories[repo_id].assets.identifiers
         from_time = from_time or self.DEFAULT_FROM_TIME
-        logging.info('Getting IDs for {} from {}'.format(repo_id, location))
-        query_dict = {'page': 0, 'from': from_time.isoformat()}
-        while True:
-            query_dict['page'] += 1
+        query_dict = {'from': from_time.isoformat()}
+        result_to = None
+
+        while page <= options.max_repository_pages:
+            query_dict['page'] = page
             result = yield endpoint.get(**query_dict)
             data = result.get('data')
 
@@ -480,6 +486,8 @@ class Manager(object):
             # Store the end of the range for the last query so that it can be
             # used as the start for the next time the endpoint is queried
             _, result_to = result['metadata'].get('result_range', (None, None))
+            page += 1
+
         raise Return(result_to)
 
     @coroutine
