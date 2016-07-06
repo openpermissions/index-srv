@@ -218,6 +218,53 @@ def test_three_pages_with_data(koi, repository_service_client):
 @patch('index.repositories.repository_service_client')
 @patch('index.repositories.koi')
 @gen_test
+def test_fetch_max_pages(koi, repository_service_client):
+    """Test that we don't fetch more that the max_repository_pages option"""
+    define('max_repository_pages', default=5)
+
+    client = MagicMock()
+    repository_service_client.return_value = make_future(client)
+    endpoint = client.repository.repositories.__getitem__().assets.identifiers
+    endpoint.get.side_effect = mock_identifiers({
+        1: {'data': ['first page'],
+            'metadata': {'result_range': ('2000-01-01', '2001-01-01')}},
+        2: {'data': ['second page'],
+            'metadata': {'result_range': ('2001-01-01', '2002-01-01')}},
+        3: {'data': ['third page'],
+            'metadata': {'result_range': ('2002-01-01', '2003-01-01')}},
+        4: {'data': ['fourth page'],
+            'metadata': {'result_range': ('2003-01-01', '2004-01-01')}},
+        5: {'data': ['fifth page'],
+            'metadata': {'result_range': ('2004-01-01', '2005-01-01')}},
+        6: {'data': ['sixth page'],
+            'metadata': {'result_range': ('2005-01-01', '2006-01-01')}},
+    })
+    scheduler, repostore, manager = mock_manager()
+
+    yield manager.fetch_identifiers('repo_a')
+
+    from_time = manager.DEFAULT_FROM_TIME.isoformat()
+    endpoint.get.assert_has_calls([
+        call(**{'page': 1, 'from': from_time}),
+        call(**{'page': 2, 'from': from_time}),
+        call(**{'page': 3, 'from': from_time}),
+        call(**{'page': 4, 'from': from_time}),
+        call(**{'page': 5, 'from': from_time}),
+    ])
+    manager.db.add_entities.assert_has_calls([
+        call('asset', ['first page'], 'repo_a'),
+        call('asset', ['second page'], 'repo_a'),
+        call('asset', ['third page'], 'repo_a'),
+        call('asset', ['fourth page'], 'repo_a'),
+        call('asset', ['fifth page'], 'repo_a'),
+    ])
+    assert repostore._shelf['repo_a']['next'] == datetime(2005, 1, 1)
+
+
+
+@patch('index.repositories.repository_service_client')
+@patch('index.repositories.koi')
+@gen_test
 def test_fetch_api_call_with_saved_timestamp(koi, repository_service_client):
     """
     The 'from' query parameter should be taken from the shelf if it's populated
