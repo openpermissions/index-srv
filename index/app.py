@@ -17,7 +17,7 @@
 #
 
 """Configures and starts up the Index Service."""
-from multiprocessing import Process, Queue
+from multiprocessing import Process, Queue, Manager
 import os.path
 import tornado.ioloop
 import tornado.httpserver
@@ -42,15 +42,19 @@ APPLICATION_URLS = [
 
 def start_background_process(db):
     """Start background process to get data from repositories"""
+    repos = Manager().dict()
+
     queue = Queue(maxsize=options.notifications_queue_max_size)
     notification = repositories.Notification(queue)
-    Process(target=repositories.main, args=(db, notification)).start()
 
-    APPLICATION_URLS.append((
-        r"/notifications",
-        notification_handler.NotificationHandler,
-        {'notification_q': queue}
-    ))
+    Process(target=repositories.main, args=(db, repos, notification)).start()
+
+    APPLICATION_URLS.extend([
+        (r"/notifications",
+         notification_handler.NotificationHandler, {'notification_q': queue}),
+        (r"/repositories/{repository_id}/indexed",
+         repositories_handler.RepositoryIndexedHandler, {'repositories': repos}),
+    ])
 
 
 def main():
