@@ -110,8 +110,12 @@ class Notification(object):
         receives notifications and integrate them in the scheduling.
         """
         while True:
-            yield self._check_for_notifications()
-            yield sleep(options.notification_poll_interval)
+            try:
+                yield self._check_for_notifications()
+                yield sleep(options.notification_poll_interval)
+            except Exception as e:
+                logging.exception('Error checking for notifications')
+                pass
 
     @coroutine
     def _check_for_notifications(self, max_notifications=20):
@@ -242,8 +246,12 @@ class RepositoryStore(object):
         """
 
         while True:
-            yield self._fetch_repositories()
-            yield sleep(options.accounts_poll_interval)
+            try:
+                yield self._fetch_repositories()
+                yield sleep(options.accounts_poll_interval)
+            except Exception:
+                logging.exception('Error fetching repositories')
+                pass
 
     @coroutine
     def _fetch_repositories(self):
@@ -494,9 +502,13 @@ class Manager(object):
     def fetch_forever(self):
         """Fetch entities from repository services and reschedule"""
         while True:
-            ids = yield self.scheduler.get(options.concurrency)
-            yield [self.fetch(repo_id) for repo_id in ids]
-            yield sleep(min(options.notification_poll_interval, 1))
+            try:
+                ids = yield self.scheduler.get(options.concurrency)
+                yield [self.fetch(repo_id) for repo_id in ids]
+                yield sleep(min(options.notification_poll_interval, 1))
+            except Exception:
+                logging.exception('Error fetching entities')
+                pass
 
     @coroutine
     def fetch(self, repo_id):
