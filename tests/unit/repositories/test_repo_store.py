@@ -22,6 +22,7 @@ from mock import call, patch, Mock, MagicMock
 from tornado.httpclient import HTTPError
 from koi.test_helpers import make_future, gen_test
 from tornado.options import define
+from freezegun import freeze_time
 
 from index import repositories
 
@@ -42,7 +43,7 @@ def test_get_repositories(koi, API, shelve):
     schedule_fetch = Mock()
     schedule_fetch.return_value = make_future([])
 
-    repostore = repositories.RepositoryStore()
+    repostore = repositories.RepositoryStore({})
     repostore.on_new_repo = schedule_fetch
     repostore._shelf = {}
 
@@ -68,7 +69,7 @@ def test_get_repositories_are_registered_once(koi, API, shelve):
     schedule_fetch = Mock()
     schedule_fetch.return_value = make_future([])
 
-    repostore = repositories.RepositoryStore()
+    repostore = repositories.RepositoryStore({})
     repostore.on_new_repo = schedule_fetch
     repostore._shelf = {
         'a':  {'id': 'a', 'location': 'http://a.test'},
@@ -96,7 +97,7 @@ def test_get_repositories_swallow_exceptions(koi, API, logging, shelve):
     schedule_fetch = Mock()
     schedule_fetch.return_value = make_future([])
 
-    repostore = repositories.RepositoryStore()
+    repostore = repositories.RepositoryStore({})
     repostore.on_new_repo = schedule_fetch
 
     yield repostore._fetch_repositories()
@@ -111,7 +112,7 @@ def test_get_repository(shelve):
     shelf = {'repo1': {'id': 1}}
     shelve.open.return_value = shelf
 
-    repo_store = repositories.RepositoryStore(api_client=Mock())
+    repo_store = repositories.RepositoryStore({}, api_client=Mock())
     result = yield repo_store.get_repository('repo1')
 
     assert result == shelf['repo1']
@@ -131,7 +132,7 @@ def test_get_unknown_repository_closed_service(shelve, options):
     endpoint().get.return_value = make_future({'data': {'id': 1}})
     endpoint.reset_mock()
 
-    repo_store = repositories.RepositoryStore(api_client=api_client)
+    repo_store = repositories.RepositoryStore({}, api_client=api_client)
     with pytest.raises(KeyError):
         yield repo_store.get_repository('repo1')
 
@@ -153,7 +154,7 @@ def test_get_unknown_repository_exists_in_accounts(shelve):
     endpoint().get.return_value = make_future({'data': repo})
     endpoint.reset_mock()
 
-    repo_store = repositories.RepositoryStore(api_client=api_client)
+    repo_store = repositories.RepositoryStore({}, api_client=api_client)
     result = yield repo_store.get_repository(repo_id)
 
     endpoint.assert_called_once_with(repo_id)
@@ -172,7 +173,7 @@ def test_get_unknown_repository_does_not_exist_in_accounts(shelve):
     endpoint = api_client.accounts.repositories.__getitem__
     endpoint().get.side_effect = HTTPError(404, 'Unknown resource')
 
-    repo_store = repositories.RepositoryStore(api_client=api_client)
+    repo_store = repositories.RepositoryStore({}, api_client=api_client)
     with pytest.raises(KeyError):
         yield repo_store.get_repository('repo1')
 
@@ -188,7 +189,7 @@ def test_fail(shelve, logging):
     shelf = {'repo1': {}}
     shelve.open.return_value = shelf
 
-    store = repositories.RepositoryStore(api_client=MagicMock())
+    store = repositories.RepositoryStore({}, api_client=MagicMock())
 
     store.fail('repo1', 'An error')
     assert shelf['repo1'] == {'errors': 1}
@@ -207,7 +208,7 @@ def test_fail_without_reason(shelve, logging):
     shelf = {'repo1': {}}
     shelve.open.return_value = shelf
 
-    store = repositories.RepositoryStore(api_client=MagicMock())
+    store = repositories.RepositoryStore({}, api_client=MagicMock())
 
     store.fail('repo1')
     assert shelf['repo1'] == {'errors': 1}
@@ -226,7 +227,7 @@ def test_fail_unknown_(shelve):
     shelf = {'repo1': {}}
     shelve.open.return_value = shelf
 
-    store = repositories.RepositoryStore(api_client=MagicMock())
+    store = repositories.RepositoryStore({}, api_client=MagicMock())
 
     with pytest.raises(KeyError):
         yield store.fail('repo0')
@@ -234,6 +235,7 @@ def test_fail_unknown_(shelve):
     assert shelf['repo1'] == {}
 
 
+@freeze_time("2000-01-01")
 @patch('index.repositories.IOLoop')
 @patch('index.repositories.shelve')
 @gen_test
@@ -241,28 +243,34 @@ def test_success(shelve, IOLoop):
     """Test recording successful fetch"""
     shelf = {'repo1': {}}
     shelve.open.return_value = shelf
+    repo_dict = {}
 
-    store = repositories.RepositoryStore(api_client=MagicMock())
+    store = repositories.RepositoryStore(repo_dict, api_client=MagicMock())
 
     now = datetime.now()
     store.success('repo1', now)
-    assert shelf['repo1'] == {
+    expected = {
         'next': now,
-        'last': IOLoop.current().time(),
+        'last': datetime(2000, 01, 01),
         'errors': 0,
         'successful_queries': 1
     }
+    assert shelf['repo1'] == expected
+    assert repo_dict['repo1'] == expected
 
     later = datetime.now()
     store.success('repo1', later)
-    assert shelf['repo1'] == {
+    expected = {
         'next': later,
-        'last': IOLoop.current().time(),
+        'last': datetime(2000, 01, 01),
         'errors': 0,
         'successful_queries': 2
     }
+    assert shelf['repo1'] == expected
+    assert repo_dict['repo1'] == expected
 
 
+@freeze_time("2000-01-01")
 @patch('index.repositories.IOLoop')
 @patch('index.repositories.shelve')
 @gen_test
@@ -270,19 +278,23 @@ def test_success_resets_errors(shelve, IOLoop):
     """Test recording successful fetch resets errors"""
     shelf = {'repo1': {'errors': 10}}
     shelve.open.return_value = shelf
+    repo_dict = {}
 
-    store = repositories.RepositoryStore(api_client=MagicMock())
+    store = repositories.RepositoryStore(repo_dict, api_client=MagicMock())
 
     now = datetime.now()
     store.success('repo1', now)
-    assert shelf['repo1'] == {
+    expected = {
         'next': now,
-        'last': IOLoop.current().time(),
+        'last': datetime(2000, 01, 01),
         'errors': 0,
         'successful_queries': 1
     }
+    assert shelf['repo1'] == expected
+    assert repo_dict['repo1'] == expected
 
 
+@freeze_time("2000-01-01")
 @patch('index.repositories.IOLoop')
 @patch('index.repositories.shelve')
 @gen_test
@@ -290,18 +302,22 @@ def test_success_without_next(shelve, IOLoop):
     """Test recording successful fetch resets errors"""
     shelf = {'repo1': {}}
     shelve.open.return_value = shelf
+    repo_dict = {}
 
-    store = repositories.RepositoryStore(api_client=MagicMock())
+    store = repositories.RepositoryStore(repo_dict, api_client=MagicMock())
 
     store.success('repo1')
-    assert shelf['repo1'] == {
+    expected = {
         'next': None,
-        'last': IOLoop.current().time(),
+        'last': datetime(2000, 01, 01),
         'errors': 0,
         'successful_queries': 1
     }
+    assert shelf['repo1'] == expected
+    assert repo_dict['repo1'] == expected
 
 
+@freeze_time("2000-01-01")
 @patch('index.repositories.IOLoop')
 @patch('index.repositories.shelve')
 @gen_test
@@ -309,13 +325,16 @@ def test_success_replace_next_with_none(shelve, IOLoop):
     """Test recording successful fetch resets errors"""
     shelf = {'repo1': {'next': 'something'}}
     shelve.open.return_value = shelf
+    repo_dict = {}
 
-    store = repositories.RepositoryStore(api_client=MagicMock())
+    store = repositories.RepositoryStore(repo_dict, api_client=MagicMock())
 
     store.success('repo1')
-    assert shelf['repo1'] == {
+    expected = {
         'next': None,
-        'last': IOLoop.current().time(),
+        'last': datetime(2000, 01, 01),
         'errors': 0,
         'successful_queries': 1
     }
+    assert shelf['repo1'] == expected
+    assert repo_dict['repo1'] == expected

@@ -212,11 +212,12 @@ class Scheduler(object):
 class RepositoryStore(object):
     """Responsible for storing information about repositories"""
 
-    def __init__(self, api_client=None):
+    def __init__(self, repository_dict, api_client=None):
         if api_client is None:
             api_client = API(options.url_accounts,
                              ssl_options=ssl_server_options())
 
+        self._repository_dict = repository_dict
         self._api = api_client
         self._endpoint = self._api.accounts.repositories
         self._shelf = shelve.open(options.local_db, writeback=True)
@@ -283,6 +284,7 @@ class RepositoryStore(object):
         :param repo_id: The repository identifier
         :param repository: The repository record
         """
+        self._repository_dict[repo_id] = repository
         self._shelf[str(repo_id)] = repository
 
     def fail(self, repo_id, reason=None):
@@ -323,7 +325,7 @@ class RepositoryStore(object):
         repository = self._get_repository(repo_id)
         changes = {
             'next': next_query_start,
-            'last': IOLoop.current().time(),
+            'last': datetime.utcnow(),
             'errors': 0,
             'successful_queries': repository.get('successful_queries', 0) + 1
         }
@@ -555,7 +557,7 @@ def repository_service_client(location):
     raise Return(client)
 
 
-def main(database, notification=None):
+def main(database, repository_dict, notification=None):
     """
     Main entry point for the process crawling the repositories
     """
@@ -564,7 +566,7 @@ def main(database, notification=None):
     io_loop = IOLoop.current()
 
     scheduler = Scheduler()
-    with RepositoryStore() as repositorystore:
+    with RepositoryStore(repository_dict) as repositorystore:
         manager = Manager(database, repositorystore, scheduler)
 
         repositorystore.start()
@@ -588,6 +590,7 @@ if __name__ == '__main__':
         options.index_db_path,
         options.index_schema)
 
+    repository_dict = dict()
     notification_q = Queue.Queue()
     notification = Notification(notification_q)
-    main(db, notification)
+    main(db, repository_dict, notification)

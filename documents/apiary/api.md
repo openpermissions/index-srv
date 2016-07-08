@@ -324,6 +324,44 @@ List of source_id_type and source_id value pairs.
                 ]
             }
 
+# Group Indexed
+Endpoint to retrieve timestamp of when repository was last indexed
+
+## Indexed [/v1/index/repositories/{repository_id}/indexed]
+
++ Parameters
+    + repository_id (required, enum[string])
+        The id of the repository
+
+### Get last indexed [GET]
+
+| OAuth Token Scope |
+| :----------       |
+| read              |
+
+
+#### Output
+| Property     | Description                | Type   |
+| :-------     | :----------                | :---   |
+| status       | The status of the request  | number |
+| last_indexed | ISO-formatted timestamp    | string |
+
+
++ Request
+    + Headers
+
+            Accept: application/json
+            Authorization: Bearer [TOKEN]
+
++ Response 200 (application/json; charset=UTF-8)
+    + Body
+
+            {
+                "status": 200,
+                "last_indexed": "2016-07-08T09:10:47+00:00"
+            }
+            
+            
 # Group Notifications
 Endpoint to send notifications of new data in a repository
 

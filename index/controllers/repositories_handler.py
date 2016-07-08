@@ -25,6 +25,7 @@ from tornado.options import options, define
 from koi.base import BaseHandler
 from koi import exceptions
 
+
 define('max_related_depth', default=5,
        help='Maximum recursion on ids allowed for related ids queries')
 
@@ -122,3 +123,23 @@ class BulkRepositoriesHandler(BaseHandler):  # pragma: no cover
         }
 
         self.finish(result)
+
+class RepositoryIndexedHandler(BaseHandler):
+    """Return timestamp of last indexed time for repository"""
+    def initialize(self, repositories, **kwargs):
+        self.repositories = repositories
+
+    @coroutine
+    def get(self, repository_id):
+        repository = self.repositories.get(repository_id)
+        if not repository:
+            raise exceptions.HTTPError(404, 'Not found')
+
+        last_indexed = repository.get('last')
+        if last_indexed:
+            last_indexed = last_indexed.isoformat()
+
+        self.finish({
+            'status': 200,
+            'last_indexed': last_indexed
+        })
