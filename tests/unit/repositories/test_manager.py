@@ -42,7 +42,7 @@ def mock_manager(use_clock=False):
     empty shelf (using a dict instead of an actual shelf instance), and
     an example repository
     """
-    repostore = repositories.RepositoryStore()
+    repostore = repositories.RepositoryStore({})
     repostore._shelf = {
         'repo_a': {'id': 'repo_a', 'service': {'location': 'http://a.test'}}
     }
@@ -94,7 +94,7 @@ def test_unknown_repository(API):
     """
     scheduler = MagicMock()
     scheduler.get.return_value = make_future('repo1')
-    store = repositories.RepositoryStore()
+    store = repositories.RepositoryStore({})
     store._shelf = {}
     # get_repository raises a KeyError if repo is unknown
     store.get_repository = MagicMock(side_effect=KeyError)

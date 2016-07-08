@@ -5,3 +5,4 @@ python-dateutil==2.4.2
 opp-chub==1.0.6
 opp-koi==1.0.10
 opp-bass==1.0.9
+freezegun==0.3.7

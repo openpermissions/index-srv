@@ -25,7 +25,6 @@ from tornado.options import options, define
 from koi.base import BaseHandler
 from koi import exceptions
 
-import dateutil.parser
 
 define('max_related_depth', default=5,
        help='Maximum recursion on ids allowed for related ids queries')
