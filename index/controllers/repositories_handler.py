@@ -25,6 +25,7 @@ from tornado.options import options, define
 from koi.base import BaseHandler
 from koi import exceptions
 
+from urllib import quote_plus
 
 define('max_related_depth', default=5,
        help='Maximum recursion on ids allowed for related ids queries')
@@ -60,7 +61,8 @@ class RepositoriesHandler(BaseHandler):  # pragma: no cover
 
         try:
             results = yield self.database.query(
-                [{'source_id_type': source_id_type, 'source_id': source_id}],
+                [{'source_id_type': quote_plus(source_id_type), 
+                    'source_id': quote_plus(source_id)}],
                 related_depth)
         except exceptions.HTTPError:
             # Raise a 404 because the URL contains an invaild ID that does
