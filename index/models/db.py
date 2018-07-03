@@ -131,6 +131,38 @@ SOURCE_ID_FILTER_TEMPLATE = string.Template("""
 ("$id"^^xsd:string "$id_type"^^xsd:string)
 """)
 
+FIND_ENTITY_SOURCE_IDS_TEMPLATE = string.Template("""
+SELECT DISTINCT ?id ?idtype
+WHERE {<$entity_id> ?p ?o.
+?o  	<http://digicat.io/ns/chubindex/1.0/id>  ?id;
+<http://digicat.io/ns/chubindex/1.0/id_type> ?idtype.}
+""")
+
+FIND_ENTITY_COUNT_BY_SOURCE_IDS_TEMPLATE = string.Template("""
+SELECT (COUNT(?s) AS ?count)
+WHERE {?s ?p ?o.
+		?o 
+           <http://digicat.io/ns/chubindex/1.0/id> "$source_id"^^xsd:string;
+			<http://digicat.io/ns/chubindex/1.0/id_type> "$source_id_type"^^xsd:string
+			.    
+      FILTER NOT EXISTS {<$entity_id> ?p ?o}
+                 }
+""")
+
+DELETE_ID_TRIPLES_TEMPLATE = string.Template("""
+DELETE
+WHERE {?s 
+           <http://digicat.io/ns/chubindex/1.0/id> "$source_id"^^xsd:string;
+			<http://digicat.io/ns/chubindex/1.0/id_type> "$source_id_type"^^xsd:string;
+      ?p ?o.}
+""")
+
+DELETE_ENTITY_TRIPLE_TEMPLATE = string.Template("""
+DELETE
+WHERE {
+<$entity_id> ?p ?o}
+""")
+
 class DbInterface(object):
     def __init__(self, base_path, port, path, schema):
         """
@@ -272,7 +304,7 @@ class DbInterface(object):
         :param ids: a list of dictionaries containing "source_id" & "source_id_type".
         :param repository_id: the repo to search.
 
-        :returns: a list of entities
+        :returns: a list of entity ids
         """
         subqueries = [SOURCE_ID_FILTER_TEMPLATE.substitute(id = x['source_id'], id_type = x['source_id_type'])
                       for x in ids]
@@ -285,6 +317,83 @@ class DbInterface(object):
 
         results = [x['s'] for x in queryresults]
         raise gen.Return(results)
+
+    @gen.coroutine
+    def _getEntityIdsAndTypes(self, entity_id):
+        """
+        Get list of source_ids and source_id_types for a given entity id
+
+        :param entity_id: the entity id
+
+        :returns: a list of source_id and source_id_types
+        """
+        query = FIND_ENTITY_SOURCE_IDS_TEMPLATE.substitute(entity_id = entity_id)
+
+        logging.debug(query)
+        queryresults = yield self._run_query(query)
+        logging.debug(queryresults)
+
+        results = [{'source_id_type': x['idtype'], 'source_id': x['id']} for x in queryresults]
+
+        raise gen.Return(results)
+
+    @gen.coroutine
+    def _countMatchesNotIncluding(self, idAndType, entity_id):
+        """
+        Count the number of entities using these ids/types (other than this entity)
+
+        :param: idAndType: the source_id and source_id_type to search for
+        :param entity_id: the entity id of the entity to exclude
+
+        :returns: a count of entities
+        """
+        logging.debug('idandtype ' + str(idAndType))
+        query = FIND_ENTITY_COUNT_BY_SOURCE_IDS_TEMPLATE.substitute(source_id_type = idAndType['source_id_type'],
+                                                                    source_id = idAndType['source_id'],
+                                                                    entity_id = entity_id)
+
+        logging.debug(query)
+        queryresults = yield self._run_query(query)
+        logging.debug(queryresults)
+
+        raise gen.Return(queryresults)
+
+    @gen.coroutine
+    def _deleteIds(self, idAndType):
+        """
+        Delete id/type triples
+
+        :param: idAndType: the source_id and source_id_type to delete
+
+        :returns: nothing
+        """
+        logging.debug('delete idandtype ' + str(idAndType))
+        query = DELETE_ID_TRIPLES_TEMPLATE.substitute(source_id_type = idAndType['source_id_type'],
+                                                                    source_id = idAndType['source_id'])
+
+        logging.debug(query)
+        queryresults = yield self._run_query(query)
+        logging.debug(queryresults)
+
+        raise gen.Return()    
+
+    @gen.coroutine
+    def _deleteEntity(self, entity_id):
+        """
+        Delete entity triples
+
+        :param: entity_id: the id of the entity to delete
+
+        :returns: nothing
+        """
+        logging.debug('delete entity_id ' + str(entity_id))
+        query = DELETE_ENTITY_TRIPLE_TEMPLATE.substitute(entity_id = entity_id)
+
+        logging.debug(query)
+        queryresults = yield self._run_query(query)
+        logging.debug(queryresults)
+
+        raise gen.Return()    
 
     @gen.coroutine
     def _query_ids(self, ids, related_depth=0):
@@ -423,26 +532,24 @@ class DbInterface(object):
         entities = yield self._getMatchingEntities(validated_ids, repository_id)
 
         logging.debug('entities ' + str(entities))
-        
+
         # for each entity find all the ids associated with it
         for entity in entities:
-            idsAndTypes = yield self.getEntityIdsAndTypes(entity)
+            idsAndTypes = yield self._getEntityIdsAndTypes(entity)
 
             # loop through each set of ids for this entity
             for idAndType in idsAndTypes:
                 # if these ids are NOT used for anything else then delete them
-                count = yield self.countMatchesNotIncluding(idAndType, entity)
+                result = yield self._countMatchesNotIncluding(idAndType, entity)
+                count = int(result[0].get('count', '0'))
 
                 if count == 0:
-                    yield deleteIds(idAndType)
+                    yield self._deleteIds(idAndType)
             
             # delete the entity itself
-            yield deleteEntity(entity)
+            yield self._deleteEntity(entity)
             
-
-
-
-        raise gen.Return(result)
+        raise gen.Return()
 
     @gen.coroutine
     def add_entities(self, entity_type, data, repo):
