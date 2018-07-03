@@ -88,9 +88,6 @@ class RepositoryHandler(BaseHandler):  # pragma: no cover
 
     This endpoint supports deleting from the index as part of the UPSERT support in onboarding
     """
-    METHOD_ACCESS = {
-        'DELETE': BaseHandler.UNAUTHENTICATED_ACCESS
-    }
 
     def initialize(self, database):
         self.database = database
@@ -107,8 +104,6 @@ class RepositoryHandler(BaseHandler):  # pragma: no cover
         :param repository_id: the id of the repository to delete the entity from
         :return: status 204 No Content on success or error code
         """
-        logging.debug('hello')
-
         id_types = source_id_type.split(',')
         ids = source_id.split(',')
 
@@ -128,8 +123,7 @@ class RepositoryHandler(BaseHandler):  # pragma: no cover
                 all_ids,
                 repository_id)
         except exceptions.HTTPError:
-            # Raise a 404 because the URL contains an invaild ID that does
-            # not exist
+            # Raise a 404 because the URL contains invaild IDs that do not exist
             raise exceptions.HTTPError(404, 'Not found (%r,%r,%r)'%(source_id_type, source_id, repository_id))
 
         result = {
