@@ -33,6 +33,8 @@ CONF_DIR = os.path.join(os.path.dirname(__file__), '../config')
 
 APPLICATION_URLS = [
     (r"", root_handler.RootHandler, {'version': __version__}),
+    (r"/entity-types/{entity_type}/id-types/{source_id_type}/ids/{source_id}/repositories/{repository_id}",
+     repositories_handler.RepositoryHandler),
     (r"/entity-types/{entity_type}/id-types/{source_id_type}/ids/{source_id}/repositories",
      repositories_handler.RepositoriesHandler),
     (r"/entity-types/{entity_type}/repositories",

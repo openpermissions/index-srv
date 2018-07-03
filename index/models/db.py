@@ -114,6 +114,22 @@ QUERY_TEMPLATE = string.Template("""
 }
 """)
 
+FIND_ENTITY_TEMPLATE = string.Template("""
+SELECT DISTINCT ?s
+WHERE {?s ?p ?o;
+<http://digicat.io/ns/chubindex/1.0/repo> "$repository_id"^^xsd:string.
+	?o  	<http://digicat.io/ns/chubindex/1.0/id>  ?id;
+<http://digicat.io/ns/chubindex/1.0/id_type>  ?idtype
+		.
+		VALUES (?id ?idtype) {
+		$id_filter
+		}
+	}
+""")
+
+SOURCE_ID_FILTER_TEMPLATE = string.Template("""
+("$id"^^xsd:string "$id_type"^^xsd:string)
+""")
 
 class DbInterface(object):
     def __init__(self, base_path, port, path, schema):
@@ -249,6 +265,28 @@ class DbInterface(object):
         return query
 
     @gen.coroutine
+    def _getMatchingEntities(self, ids, repository_id):
+        """
+        Get list of entities matching the given incoming ids 
+
+        :param ids: a list of dictionaries containing "source_id" & "source_id_type".
+        :param repository_id: the repo to search.
+
+        :returns: a list of entities
+        """
+        subqueries = [SOURCE_ID_FILTER_TEMPLATE.substitute(id = x['source_id'], id_type = x['source_id_type'])
+                      for x in ids]
+
+        query = FIND_ENTITY_TEMPLATE.substitute(repository_id = repository_id, id_filter = ''.join(subqueries))
+
+        logging.debug(query)
+        queryresults = yield self._run_query(query)
+        logging.debug(queryresults)
+
+        results = [x['s'] for x in queryresults]
+        raise gen.Return(results)
+
+    @gen.coroutine
     def _query_ids(self, ids, related_depth=0):
         """
         Get list of repositories
@@ -338,6 +376,71 @@ class DbInterface(object):
             raise exceptions.HTTPError(400, errors)
 
         result = yield self._query_ids(validated_ids, related_depth)
+
+        raise gen.Return(result)
+
+    @gen.coroutine
+    def delete(self, entity_type, ids, repository_id):
+        """
+        Delete the triples relating to an entity (if they're not used
+        by another entity)
+
+        :param entity_type: the type of the entity
+        :param ids: a list of dictionaries containing "id" & "id_type"
+        :param repository_id: the repository from which to delete
+        :param related_depth: maximum depth when searching for related ids.
+        """
+        
+        entity_type = self.map_to_entity_type(entity_type)
+
+        validated_ids, errors = [], []
+
+        for x in ids:                        # source_id / source_id_type
+            if 'id' in x:
+                x['source_id'] = x['id']
+                x['source_id_type'] = x['id_type']
+            if 'source_id_type' not in x or 'source_id' not in x:
+                errors.append(x)
+            elif x['source_id_type'] == HUB_KEY:
+                try:
+                    parsed = hubkey.parse_hub_key(x['source_id'])
+                    x['source_id'] = parsed['entity_id']
+                    validated_ids.append(x)
+                except ValueError:
+                    errors.append(x)
+            else:
+                # NOTE: internal representation of the index will use
+                # id_type and id to construct URI and assusmes that id_type
+                # and and have been url_quoted
+                x['source_id'] = urllib.quote_plus(x['source_id'])
+                x['source_id_type'] = urllib.quote_plus(x['source_id_type'])
+                validated_ids.append(x)
+
+        if errors:
+            raise exceptions.HTTPError(400, errors)
+
+        # get all the entities that match the the ids in this repo
+        entities = yield self._getMatchingEntities(validated_ids, repository_id)
+
+        logging.debug('entities ' + str(entities))
+        
+        # for each entity find all the ids associated with it
+        for entity in entities:
+            idsAndTypes = yield self.getEntityIdsAndTypes(entity)
+
+            # loop through each set of ids for this entity
+            for idAndType in idsAndTypes:
+                # if these ids are NOT used for anything else then delete them
+                count = yield self.countMatchesNotIncluding(idAndType, entity)
+
+                if count == 0:
+                    yield deleteIds(idAndType)
+            
+            # delete the entity itself
+            yield deleteEntity(entity)
+            
+
+
 
         raise gen.Return(result)
 

@@ -27,6 +27,8 @@ from koi import exceptions
 
 from urllib import quote_plus
 
+import logging
+
 define('max_related_depth', default=5,
        help='Maximum recursion on ids allowed for related ids queries')
 
@@ -77,6 +79,61 @@ class RepositoriesHandler(BaseHandler):  # pragma: no cover
         result = {
             'status': 200,
             'data': data
+        }
+
+        self.finish(result)
+
+class RepositoryHandler(BaseHandler):  # pragma: no cover
+    """Delete support for UPSERTs
+
+    This endpoint supports deleting from the index as part of the UPSERT support in onboarding
+    """
+    METHOD_ACCESS = {
+        'DELETE': BaseHandler.UNAUTHENTICATED_ACCESS
+    }
+
+    def initialize(self, database):
+        self.database = database
+
+    @coroutine
+    def delete(self, entity_type, source_id_type, source_id, repository_id):
+        """
+        Obtain the list of entities matching source_id/type in a repository
+        and delete them
+
+        :param entity_type: the type of the entity to get data for
+        :param source_id_type: the type of the id (this can be a list)
+        :param source_id: the id of the entity (this can be a list)
+        :param repository_id: the id of the repository to delete the entity from
+        :return: status 204 No Content on success or error code
+        """
+        logging.debug('hello')
+
+        id_types = source_id_type.split(',')
+        ids = source_id.split(',')
+
+        if len(id_types) != len(ids):
+            raise exceptions.HTTPError(404, 'Inconsistent source_id/source_type_id lengths (%r,%r)'%(source_id_type, source_id, repository_id))
+
+        all_ids = []
+
+        for id_type, id in zip(id_types, ids):
+            item = {'source_id_type': quote_plus(id_type), 
+                    'source_id': quote_plus(id)}
+            all_ids.append(item)
+
+        try:
+            yield self.database.delete(
+                entity_type,
+                all_ids,
+                repository_id)
+        except exceptions.HTTPError:
+            # Raise a 404 because the URL contains an invaild ID that does
+            # not exist
+            raise exceptions.HTTPError(404, 'Not found (%r,%r,%r)'%(source_id_type, source_id, repository_id))
+
+        result = {
+            'status': 204
         }
 
         self.finish(result)
