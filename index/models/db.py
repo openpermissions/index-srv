@@ -150,7 +150,8 @@ WHERE {?s ?p ?o.
 """)
 
 DELETE_ID_TRIPLES_TEMPLATE = string.Template("""
-DELETE
+#DELETE
+CONSTRUCT
 WHERE {?s 
            <http://digicat.io/ns/chubindex/1.0/id> "$source_id"^^xsd:string;
 			<http://digicat.io/ns/chubindex/1.0/id_type> "$source_id_type"^^xsd:string;
@@ -158,7 +159,8 @@ WHERE {?s
 """)
 
 DELETE_ENTITY_TRIPLE_TEMPLATE = string.Template("""
-DELETE
+#DELETE
+CONSTRUCT
 WHERE {
 <$entity_id> ?p ?o}
 """)
@@ -497,7 +499,6 @@ class DbInterface(object):
         :param entity_type: the type of the entity
         :param ids: a list of dictionaries containing "id" & "id_type"
         :param repository_id: the repository from which to delete
-        :param related_depth: maximum depth when searching for related ids.
         """
         
         entity_type = self.map_to_entity_type(entity_type)
