@@ -219,6 +219,20 @@ class DbInterface(object):
 
         raise gen.Return(list(csv.DictReader(rsp.buffer)))
 
+    @gen.coroutine
+    def _run_update(self, query):
+        if type(query) == unicode:
+            query = query.encode('ascii')
+
+        headers = {'Accept': 'text/csv'}
+
+        rsp = yield AsyncHTTPClient().fetch(
+            self.db_url, method="POST",
+            body=urllib.urlencode({'update': SPARQL_PREFIXES + query}),
+            headers=headers)
+
+        raise gen.Return(list(csv.DictReader(rsp.buffer)))
+
     def _format_relation_subquery(self, source_id_type, source_id, initial_query, maxdepth=2):
         if not maxdepth:
             # we didn't asked for relations... so let just return nothing
@@ -372,7 +386,7 @@ class DbInterface(object):
                                                                     source_id = idAndType['source_id'])
 
         logging.debug(query)
-        queryresults = yield self._run_query(query)
+        queryresults = yield self._run_update(query)
         logging.debug(queryresults)
 
         raise gen.Return()    
@@ -390,7 +404,7 @@ class DbInterface(object):
         query = DELETE_ENTITY_TRIPLE_TEMPLATE.substitute(entity_id = entity_id)
 
         logging.debug(query)
-        queryresults = yield self._run_query(query)
+        queryresults = yield self._run_update(query)
         logging.debug(queryresults)
 
         raise gen.Return()    
