@@ -150,8 +150,7 @@ WHERE {?s ?p ?o.
 """)
 
 DELETE_ID_TRIPLES_TEMPLATE = string.Template("""
-#DELETE
-CONSTRUCT
+DELETE
 WHERE {?s 
            <http://digicat.io/ns/chubindex/1.0/id> "$source_id"^^xsd:string;
 			<http://digicat.io/ns/chubindex/1.0/id_type> "$source_id_type"^^xsd:string;
@@ -159,8 +158,7 @@ WHERE {?s
 """)
 
 DELETE_ENTITY_TRIPLE_TEMPLATE = string.Template("""
-#DELETE
-CONSTRUCT
+DELETE
 WHERE {
 <$entity_id> ?p ?o}
 """)
