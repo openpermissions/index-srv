@@ -544,25 +544,39 @@ class DbInterface(object):
         # get all the entities that match the the ids in this repo
         entities = yield self._getMatchingEntities(validated_ids, repository_id)
 
-        logging.debug('entities ' + str(entities))
+        logging.debug('searching for ids ' + str(validated_ids))
+        logging.debug('found entities ' + str(entities))
 
         # for each entity find all the ids associated with it
         for entity in entities:
             idsAndTypes = yield self._getEntityIdsAndTypes(entity)
+            logging.debug('for entity ' + str(entity) + ' got these ids ' + str(idsAndTypes))
+            assetMatch = yield self._checkIdsAndTypesIdentical(validated_ids, idsAndTypes)
+            logging.debug('identical? : ' + str(assetMatch))
 
-            # loop through each set of ids for this entity
-            for idAndType in idsAndTypes:
-                # if these ids are NOT used for anything else then delete them
-                result = yield self._countMatchesNotIncluding(idAndType, entity)
-                count = int(result[0].get('count', '0'))
+            if assetMatch:
+                # loop through each set of ids for this entity
+                for idAndType in idsAndTypes:
+                    # if these ids are NOT used for anything else then delete them
+                    result = yield self._countMatchesNotIncluding(idAndType, entity)
+                    count = int(result[0].get('count', '0'))
 
-                if count == 0:
-                    yield self._deleteIds(idAndType)
-            
-            # delete the entity itself
-            yield self._deleteEntity(entity)
+                    if count == 0:
+                        yield self._deleteIds(idAndType)
+                
+                # delete the entity itself
+                yield self._deleteEntity(entity)
             
         raise gen.Return()
+
+    @gen.coroutine
+    def _checkIdsAndTypesIdentical(self, searchIds, assetIds):
+        logging.debug('compariong ' + str(searchIds) + ' : ' + str(assetIds))
+        if not [s for s in searchIds if (s['source_id_type'], s['source_id']) not in {(a['source_id_type'].replace('http://openpermissions.org/ns/hub/', ''), a['source_id']) for a in assetIds}] \
+            and not [a for a in assetIds if (a['source_id_type'].replace('http://openpermissions.org/ns/hub/', ''), a['source_id']) not in {(s['source_id_type'], s['source_id']) for s in searchIds}]:
+            raise gen.Return(True)
+        else:
+            raise gen.Return(False)
 
     @gen.coroutine
     def add_entities(self, entity_type, data, repo):
