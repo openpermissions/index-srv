@@ -20,3 +20,5 @@ htmlcov
 _build
 
 node_modules
+open_permissions_platform_index_service.egg-info/
+repos_shelf.db.db
