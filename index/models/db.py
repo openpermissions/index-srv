@@ -144,8 +144,6 @@ WHERE {?s ?p ?o.
 		?o 
            <http://digicat.io/ns/chubindex/1.0/id> "$source_id"^^xsd:string;
 			<http://digicat.io/ns/chubindex/1.0/id_type> "$source_id_type"^^xsd:string
-			.    
-      FILTER NOT EXISTS {<$entity_id> ?p ?o}
                  }
 """)
 
@@ -211,6 +209,8 @@ class DbInterface(object):
             query = query.encode('ascii')
 
         headers = {'Accept': 'text/csv'}
+
+	logging.debug('_run_query : ' + SPARQL_PREFIXES + query)
 
         rsp = yield AsyncHTTPClient().fetch(
             self.db_url, method="POST",
@@ -561,7 +561,7 @@ class DbInterface(object):
                     result = yield self._countMatchesNotIncluding(idAndType, entity)
                     count = int(result[0].get('count', '0'))
 
-                    if count == 0:
+                    if count == 1:
                         yield self._deleteIds(idAndType)
                 
                 # delete the entity itself
